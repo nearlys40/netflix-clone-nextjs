@@ -24,8 +24,8 @@ const Auth = () => {
       await signIn("credentials", {
         email,
         password,
-        redirect: false,
-        callbackUrl: "/profiles",
+        redirect: true,
+        callbackUrl: "/",
       });
     } catch (error) {
       console.log(error);
