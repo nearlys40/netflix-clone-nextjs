@@ -12,8 +12,7 @@ export default async function handler(
     if (req.method === "POST") {
       const { currentUser } = await serverAuth(req, res);
 
-      const { movieId, email } = req.body;
-      console.log(email);
+      const { movieId } = req.body;
 
       const existingMovie = await prismadb.movie.findUnique({
         where: {
